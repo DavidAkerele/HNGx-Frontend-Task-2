@@ -84,7 +84,7 @@ const MovieInfo = () => {
   );
 };
 
-const Button = ({ bgColor, textColor, iconSrc, buttonText, hasBorder }: ButtonProps) => {
+const Button = ({ bgColor, textColor, iconSrc, buttonText }: ButtonProps) => {
   return (
     <button
       className={`w-full flex gap-[10px] bg-${bgColor} text-${textColor} font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]`}
