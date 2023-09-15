@@ -56,6 +56,7 @@ const MovieInfo = () => {
               textColor="white"
               iconSrc="/ticket.png"
               buttonText="See Showtimes"
+              hasBorder={true}
             />
             <Button
               bgColor="#F8E7EB"
@@ -84,16 +85,17 @@ const MovieInfo = () => {
   );
 };
 
-const Button = ({ bgColor, textColor, iconSrc, buttonText }: ButtonProps) => {
+const Button = ({ bgColor, textColor, iconSrc, buttonText, hasBorder }: ButtonProps) => {
   return (
     <button
-      className={`w-full flex gap-[10px] bg-${bgColor} text-${textColor} font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]`}
+      className={`w-full flex gap-[10px] bg-${bgColor} text-${textColor} font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] ${hasBorder ? 'border border-[#BE123C]' : ''}`}
     >
       <Image src={iconSrc} alt="" width={24} height={24} />
       {buttonText}
     </button>
   );
 };
+
 
 
 export default MovieInfo;
